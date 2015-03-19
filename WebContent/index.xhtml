@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+			   "http://www.w1.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns = "http://www.w3.org/1999/xhtml"
+	  xmlns:h  = "http://java.sun.com/jsf/html"
+	  xmlns:f  = "http://java.sun.com/jsf/core"
+	  xmlns:ui = "http://java.sun.com/jsf/facelets"
+	  xmlns:p  = "http://primefaces.org/ui">
+<h:head></h:head>
+
+	<h:body>
+
+	<h1>Teste Primefaces</h1>
+
+	<h:form>
+	
+		<p:panel id="panel" header="Form" style = "margin-botton:10px;">
+		<h:panelGrid columns="2" cellpadding ="5">
+		
+		<p:outputLabel for="idd" value="ID:"/>
+		<p:inputText id="idd" required ="true" value="#{testeMB.pessoa.id}"/>
+		
+		<p:outputLabel for="rg" value="RG"/>
+		<p:inputText id="rg" required="true" value="#{testeMB.pessoa.rg}"/>
+		
+		<p:outputLabel for="nome" value="Nome" />
+		<p:inputText id="nome" required="true" value="#{testeMB.pessoa.nome}"/>
+		
+		</h:panelGrid>
+		</p:panel>
+	
+			<p:commandButton value="Enviar" update="panel" actionListener="#{testeMB.salvar}"/>
+		
+		</h:form>
+	</h:body>
+</html> 
